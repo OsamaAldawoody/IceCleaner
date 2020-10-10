@@ -1,0 +1,364 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:text="@string/phone_boots"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/textview_small_header_clean" />
+
+        <LinearLayout
+            android:id="@+id/viewAutoBoost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_row"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvAutoBoost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/auto_boost"
+                    android:textColor="@color/grey_500"
+                    android:textSize="@dimen/textview_small_header_clean" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:text="@string/every_10_mins"
+                    android:textColor="@color/grey_500"
+                    android:textSize="@dimen/textview_small_header_clean" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/checkboxAutoBoost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_list"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:visibility="gone">
+
+            <SeekBar
+                android:id="@+id/seekBarScreenBrightness"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:secondaryProgress="@color/colorPrimary" />
+
+            <CheckBox
+                android:id="@+id/checkBoxScreenBrightness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/auto" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/view_line" />
+
+        <LinearLayout
+            android:id="@+id/viewWhiteList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_row"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/white_list"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textview_small_header_clean" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text="@string/white_list_description"
+                android:textColor="@color/grey_500"
+                android:textSize="@dimen/textview_small_header_clean" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:text="@string/advance"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/textview_small_header_clean" />
+
+        <LinearLayout
+            android:id="@+id/viewBoostWidget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_row"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/boost_widget"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textview_small_header_clean" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text="@string/boost_widget_description"
+                android:textColor="@color/grey_500"
+                android:textSize="@dimen/textview_small_header_clean" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/view_line" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/viewFloatingBooster"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_row"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvFloatingBooster"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/floating_booster"
+                    android:textColor="@color/grey_500"
+                    android:textSize="@dimen/textview_small_header_clean" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:text="@string/floating_booster_description"
+                    android:textColor="@color/grey_500"
+                    android:textSize="@dimen/textview_small_header_clean" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/checkboxFloating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/view_line" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/viewBatteryPercent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_row"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvBatteryPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/battery_percent"
+                    android:textColor="@color/grey_500"
+                    android:textSize="@dimen/textview_small_header_clean" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:text="@string/battery_percent_description"
+                    android:textColor="@color/grey_500"
+                    android:textSize="@dimen/textview_small_header_clean" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/checkboxBatteryPercent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/view_line" />
+
+        <LinearLayout
+            android:id="@+id/viewFully"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_row"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvFully"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/full_battery_percent"
+                    android:textColor="@color/grey_500"
+                    android:textSize="@dimen/textview_small_header_clean" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:text="@string/full_battery_percent_description"
+                    android:textColor="@color/grey_500"
+                    android:textSize="@dimen/textview_small_header_clean" />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/checkboxFullyBattery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:text="@string/others"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/textview_small_header_clean" />
+
+        <LinearLayout
+            android:id="@+id/viewRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_row"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/rate"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textview_small_header_clean" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text="@string/rate_description"
+                android:textColor="@color/grey_500"
+                android:textSize="@dimen/textview_small_header_clean" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/view_line" />
+
+        <LinearLayout
+            android:id="@+id/viewShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_row"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/share"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textview_small_header_clean" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text="@string/share_description"
+                android:textColor="@color/grey_500"
+                android:textSize="@dimen/textview_small_header_clean" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

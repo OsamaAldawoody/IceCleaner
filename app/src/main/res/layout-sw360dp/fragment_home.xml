@@ -1,0 +1,199 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.phonecleaner.icecleaner.view.ArcProgress
+                android:id="@+id/arcProgressMemory"
+                android:layout_width="190dp"
+                android:layout_height="190dp"
+                android:layout_gravity="center"
+                custom:arc_bottom_text="@string/memory"
+                custom:arc_bottom_text_size="@dimen/arc_bottom_text_size"
+                custom:arc_progress="100"
+                custom:arc_suffix_text_size="@dimen/arc_suffix_text_size"
+                custom:arc_text_color="@color/white"
+                custom:arc_text_size="@dimen/arc_text_size"
+               
+                custom:arc_unfinished_color="@color/opacity_button" />
+
+            <TextView
+                android:id="@+id/tvStorage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                tools:text="@string/app_name" />
+        </LinearLayout>
+
+        <com.phonecleaner.icecleaner.view.ArcProgress
+            android:id="@+id/arcProgressRam"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            custom:arc_bottom_text="@string/ram"
+            custom:arc_bottom_text_size="@dimen/arc_bottom_text_size_small"
+            custom:arc_progress="100"
+            custom:arc_suffix_text_size="@dimen/arc_suffix_text_size_small"
+            custom:arc_text_color="@color/white"
+            custom:arc_text_size="@dimen/arc_text_size_small"
+            custom:arc_unfinished_color="@color/opacity_button" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/viewClean"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#7bd7fe"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingBottom="@dimen/padding_item_menu"
+            android:paddingTop="@dimen/padding_item_menu">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/padding_item_small_home"
+                android:src="@drawable/ic_delete_teal_500_24dp"
+                android:tint="@color/white" />
+
+            <TextView
+                style="@style/text_menu_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/junk_clean" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/viewBoost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#77ceff"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginRight="10dp"
+            android:paddingBottom="@dimen/padding_item_menu"
+            android:paddingTop="@dimen/padding_item_menu">
+
+            <ImageView
+                android:tint="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/padding_item_small_home"
+                android:src="@drawable/ic_boost_teal_500_24dp" />
+
+            <TextView
+                style="@style/text_menu_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/phone_boots" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/viewAppManager"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#81e4fe"
+            android:gravity="center"
+
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/padding_item_menu"
+            android:paddingTop="@dimen/padding_item_menu">
+
+            <ImageView
+                android:tint="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/padding_item_small_home"
+                android:src="@drawable/ic_android_teal_500_24dp" />
+
+            <TextView
+                style="@style/text_menu_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/app_manager" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/viewBattery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#79d1fe"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/padding_item_menu"
+            android:paddingTop="@dimen/padding_item_menu">
+
+            <ImageView
+                android:tint="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/padding_item_small_home"
+                android:src="@drawable/ic_battery_charging_full_teal_500_24dp" />
+
+            <TextView
+                style="@style/text_menu_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/battery_saver" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

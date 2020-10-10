@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#86f0fe</color>
+    <color name="colorPrimaryDark">#86f0fe</color>
+    <color name="colorAccent">#86f0fe</color>
+    <color name="white">#fff</color>
+    <color name="view_line">#cccccc</color>
+    <color name="opacity_button">#0D000000</color>
+    <color name="lightGray">#e0e0e0</color>
+    <color name="grey_500">#9E9E9E</color>
+    <color name="grey_700">#616161</color>
+    <color name="black">#000</color>
+    <color name="background_list">#F5F5F5</color>
+    <color name="red">#F44336</color>
+    <color name="unfinish_progress">#86f0fe</color>
+
+    <color name="black_alpha_70">#b3000000</color>
+    <color name="text_gray">#7d7d7d</color>
+    <color name="text_color_ads">#86f0fe</color>
+</resources>

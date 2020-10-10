@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgChatheadProgress"
+        android:layout_width="@dimen/layout_view_chathead"
+        android:layout_height="@dimen/layout_view_chathead"
+        android:background="@drawable/bg_circle_white_widget"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/bg_circle_chathead" />
+
+    <TextView
+        android:id="@+id/tvProgressChatHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textview_wiget"
+        tools:text="15%" />
+
+    <RelativeLayout
+        android:id="@+id/viewBoostChatHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgBoostChatHead"
+            android:layout_width="@dimen/layout_view_boost_chathead"
+            android:layout_height="@dimen/layout_view_boost_chathead"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_circle_chathead"
+            android:contentDescription="@string/app_name" />
+
+        <ImageView
+            android:layout_width="@dimen/layout_view_boost_chathead"
+            android:layout_height="@dimen/layout_view_boost_chathead"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name"
+            android:padding="20dp"
+            android:src="@drawable/ic_boost_large_1" />
+    </RelativeLayout>
+</RelativeLayout>

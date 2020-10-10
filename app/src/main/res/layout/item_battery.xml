@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_background">
+
+        <LinearLayout
+            android:id="@+id/viewSaver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="7dp">
+
+
+            <RadioButton
+                android:id="@+id/radioButtonBattery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvTitleBattery"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textview_small_header_clean"
+                tools:text="@string/app_name" />
+
+            <ImageView
+                android:id="@+id/imgArrowBattery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_keyboard_arrow_down_grey_500_36dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/lightGray" />
+
+    <LinearLayout
+        android:id="@+id/viewDescriptionBattery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_list"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/imgBrightness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_brightness_low_grey_400_18dp" />
+
+        <TextView
+            android:id="@+id/tvTimeOffScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/textview_small_header_clean"
+            tools:text="15s" />
+
+        <ImageView
+            android:id="@+id/imgWifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_wifi_grey_400_18dp" />
+
+        <ImageView
+            android:id="@+id/imgBluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_bluetooth_grey_400_18dp" />
+
+        <ImageView
+            android:id="@+id/imgData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_swap_vert_grey_400_18dp" />
+
+        <ImageView
+            android:id="@+id/imgRotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_autorenew_grey_400_18dp" />
+
+        <ImageView
+            android:id="@+id/imgVibration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_vibration_grey_400_18dp" />
+    </LinearLayout>
+</LinearLayout>

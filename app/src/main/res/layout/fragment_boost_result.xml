@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <com.phonecleaner.icecleaner.view.DonutProgress
+        android:id="@+id/progressBarBoost"
+        android:layout_width="@dimen/layout_loader"
+        android:layout_height="@dimen/layout_loader"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/progressbar_custom"
+        custom:donut_finished_color="@color/white"
+        custom:donut_finished_stroke_width="8dp"
+        custom:donut_text_color="@android:color/transparent"
+        custom:donut_unfinished_color="#80ffffff"
+        custom:donut_unfinished_stroke_width="8dp" />
+
+    <ImageView
+        android:id="@+id/imgBoostDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_done" />
+
+    <ImageView
+        android:id="@+id/imgBooster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/progressBarBoost"
+        android:layout_alignLeft="@+id/progressBarBoost"
+        android:layout_alignStart="@+id/progressBarBoost"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:contentDescription="@string/app_name" />
+
+
+    <TextView
+        android:id="@+id/tvBoostDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBarBoost"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="@string/boost_done"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        android:visibility="invisible"
+        tools:text="@string/app_name" />
+
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBoostDone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_button_done"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:text="@string/done"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

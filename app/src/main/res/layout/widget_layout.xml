@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewWigetMain"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="@dimen/layout_view_big_widget"
+        android:layout_height="@dimen/layout_view_big_widget"
+        android:background="@drawable/bg_circle_white_widget">
+
+        <ImageView
+            android:id="@+id/imgWiget"
+            android:layout_width="@dimen/layout_progressbar_widget"
+            android:layout_height="@dimen/layout_progressbar_widget"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/bg_progress" />
+
+        <ProgressBar
+            android:id="@+id/progressBarWidget"
+            android:layout_width="@dimen/layout_progressbar_widget"
+            android:layout_height="@dimen/layout_progressbar_widget"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/progressbar_widget"
+            android:progressDrawable="@color/colorPrimaryDark" />
+
+        <FrameLayout
+            android:layout_width="@dimen/layout_view_small_widget"
+            android:layout_height="@dimen/layout_view_small_widget"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_circle_white_widget" />
+
+        <TextView
+            android:id="@+id/tvProgressWiget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/textview_wiget"
+            tools:text="15%" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="@string/boost"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textview_small_header_clean" />
+</LinearLayout>

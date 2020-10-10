@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.phonecleaner.icecleaner.MainActivity">
+
+    
+    <item
+        android:id="@+id/action_rate"
+        android:icon="@drawable/ic_star_border_white_24dp"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_more_vert_white_24dp"
+        android:orderInCategory="100"
+        android:title=""
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_alarm"
+        android:icon="@drawable/ic_access_alarm_white_24dp"
+        android:orderInCategory="100"
+        android:title=""
+        app:showAsAction="always" />
+
+</menu>

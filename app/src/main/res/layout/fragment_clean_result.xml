@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/viewLoader"
+            android:layout_width="@dimen/layout_loader"
+            android:layout_height="@dimen/layout_loader"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_circle_white"
+            android:padding="35dp">
+
+            <ImageView
+                android:id="@+id/loader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name" />
+        </RelativeLayout>
+
+        <com.phonecleaner.icecleaner.view.RadarScanView
+            android:id="@+id/radarScanView"
+            android:layout_width="@dimen/layout_radar"
+            android:layout_height="@dimen/layout_radar"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_button_done"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:text="@string/done"
+        android:textColor="@color/white" />
+
+</LinearLayout>

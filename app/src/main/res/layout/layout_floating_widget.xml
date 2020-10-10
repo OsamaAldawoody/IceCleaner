@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/root_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+        <RelativeLayout
+            android:id="@+id/collapse_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <ImageView
+                android:id="@+id/collapsed_iv"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/logo"
+                tools:ignore="ContentDescription" />
+            <ImageView
+                android:id="@+id/close_btn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="50dp"
+                android:src="@drawable/close_white"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/expanded_container"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:background="#00C1E7"
+            android:orientation="horizontal"
+            android:padding="5dp">
+            <ImageView
+                android:id="@+id/boost_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_boost_teal_500_24dp"
+                tools:ignore="ContentDescription" />
+            <TextView
+                android:lineSpacingExtra="1dp"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="@string/click_to_speed"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/close_button"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/close_white"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center">
+        <VideoView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/rock_video"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</RelativeLayout>

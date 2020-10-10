@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:background="@drawable/card_background"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+
+    <ImageView
+        android:id="@+id/imgIconApBoost"
+        android:layout_width="@dimen/width_icon"
+        android:layout_height="@dimen/width_icon"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/tvNameBoost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textview_small_header_clean"
+        tools:text="Person Name" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tvSizeBoost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="@color/grey_700"
+        android:textSize="@dimen/textview_small_header_clean"
+        tools:text="105 MB" />
+
+
+    <CheckBox
+        android:id="@+id/checkBoxBoost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp" />
+</LinearLayout>

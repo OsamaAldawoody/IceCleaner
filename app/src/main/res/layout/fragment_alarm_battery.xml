@@ -1,0 +1,179 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/viewSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_row"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="@string/enabled"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textview_small_header_clean" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/view_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_row"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/start_at"
+            android:textColor="@color/grey_500"
+            android:textSize="@dimen/textview_small_header_clean" />
+
+        <TextView
+            android:id="@+id/tvTimeStart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:textColor="@color/grey_500"
+            android:textSize="@dimen/textview_big_alarm"
+            tools:text="00:00" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_row"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/stop_at"
+            android:textColor="@color/grey_500"
+            android:textSize="@dimen/textview_small_header_clean" />
+
+        <TextView
+            android:id="@+id/tvTimeStop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:textColor="@color/grey_500"
+            android:textSize="@dimen/textview_big_alarm"
+            tools:text="00:00" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewPediod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_row"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvModeToUse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/mode_to_use"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textview_small_header_clean" />
+
+            <TextView
+                android:id="@+id/tvTypeBatterySaver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text="@string/share_description"
+                android:textColor="@color/grey_500"
+                android:textSize="@dimen/textview_small_header_clean" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_keyboard_arrow_down_grey_500_36dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/view_line" />
+
+    <LinearLayout
+        android:id="@+id/viewPeriodOutside"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_row"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvModeToUsePeriod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/mode_to_use_outside"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textview_small_header_clean" />
+
+            <TextView
+                android:id="@+id/tvTypeBatterySaverPeriod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text="@string/share_description"
+                android:textColor="@color/grey_500"
+                android:textSize="@dimen/textview_small_header_clean" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_keyboard_arrow_down_grey_500_36dp" />
+    </LinearLayout>
+</LinearLayout>

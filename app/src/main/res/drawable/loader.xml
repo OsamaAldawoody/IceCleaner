@@ -1,0 +1,15 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+    <item
+        android:drawable="@drawable/ic_broom_0"
+        android:duration="450" />
+    <item
+        android:drawable="@drawable/ic_broom_1"
+        android:duration="450" />
+    <item
+        android:drawable="@drawable/ic_broom_2"
+        android:duration="450" />
+    <item
+        android:drawable="@drawable/ic_broom_3"
+        android:duration="450" />
+</animation-list>

@@ -1,0 +1,45 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="padding_item_menu">25dp</dimen>
+    <dimen name="arc_text_size">70sp</dimen>
+    <dimen name="arc_bottom_text_size">17sp</dimen>
+    <dimen name="arc_suffix_text_size">30sp</dimen>
+    <dimen name="arc_text_size_small">37sp</dimen>
+    <dimen name="arc_bottom_text_size_small">12sp</dimen>
+    <dimen name="arc_suffix_text_size_small">17sp</dimen>
+    <dimen name="height_text_clean">110dp</dimen>
+    <dimen name="height_text_boost_header">90dp</dimen>
+    <dimen name="textview_header_clean">50sp</dimen>
+    <dimen name="textview_small_header_clean">15sp</dimen>
+    <dimen name="arrow_size">32dp</dimen>
+    <dimen name="standard_padding_small">4dp</dimen>
+    <dimen name="standard_padding">8dp</dimen>
+    <dimen name="standard_padding_large">16dp</dimen>
+    <dimen name="width_icon">50dp</dimen>
+    <dimen name="padding_item_small_home">10dp</dimen>
+    <dimen name="layout_loader">200dp</dimen>
+    <dimen name="layout_radar">215dp</dimen>
+    <dimen name="width_battery">150dp</dimen>
+    <dimen name="height_battery">75dp</dimen>
+    <dimen name="height_battery_header">150dp</dimen>
+    <dimen name="width_image_battery">156dp</dimen>
+    <dimen name="height_image_battery">81dp</dimen>
+    <dimen name="textview_percent_battery">30sp</dimen>
+    <dimen name="layout_progressbar_widget">57dp</dimen>
+    <dimen name="layout_view_big_widget">60dp</dimen>
+    <dimen name="layout_view_small_widget">42dp</dimen>
+    <dimen name="textview_wiget">13sp</dimen>
+    <dimen name="layout_view_chathead">35dp</dimen>
+
+    <dimen name="width_battery_notification">80dp</dimen>
+    <dimen name="height_battery_notification">40dp</dimen>
+    <dimen name="textview_percent_battery_notfication">17sp</dimen>
+    <dimen name="layout_view_boost_chathead">90dp</dimen>
+    <dimen name="textview_big_alarm">50sp</dimen>
+    <dimen name="height_text_boost_header_wave">130dp</dimen>
+    <dimen name="view_rotate_image">30dp</dimen>
+</resources>

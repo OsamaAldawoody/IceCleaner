@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewMainNotification"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="@dimen/width_battery_notification"
+        android:layout_height="@dimen/height_battery_notification"
+        android:background="@mipmap/battery_notification">
+
+        <ProgressBar
+            android:id="@+id/progressBarBatteryNotification"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/width_battery_notification"
+            android:layout_height="@dimen/height_battery_notification"
+            android:layout_centerInParent="true"
+            android:paddingBottom="1dp"
+            android:paddingEnd="7dp"
+            android:paddingLeft="1dp"
+            android:paddingRight="7dp"
+            android:paddingStart="1dp"
+            android:paddingTop="1dp"
+            android:progressDrawable="@drawable/progressbar_states_notification" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvPercentageNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textview_percent_battery_notfication"
+                android:textStyle="bold"
+                tools:text="100" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:gravity="top"
+                android:text="@string/percent_none"
+                android:textColor="@color/white"
+                android:textSize="@dimen/arc_suffix_text_size_small" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
