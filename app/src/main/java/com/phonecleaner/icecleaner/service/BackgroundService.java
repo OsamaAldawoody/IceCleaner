@@ -3,9 +3,11 @@ package com.phonecleaner.icecleaner.service;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Binder;
 import android.os.Handler;
 import android.os.IBinder;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -21,8 +23,17 @@ public class BackgroundService extends Service {
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
-        return null;
+        return mBinder;
     }
+
+    IBinder mBinder = new LocalBinder();
+
+    public class LocalBinder extends Binder {
+        public BackgroundService getServerInstance() {
+            return BackgroundService.this;
+        }
+    }
+
 
     @Override
     public void onCreate() {

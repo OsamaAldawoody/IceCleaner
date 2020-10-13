@@ -8,6 +8,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:ignore="UselessParent">
+
+        <!-- collapse view -->
         <RelativeLayout
             android:id="@+id/collapse_view"
             android:layout_width="wrap_content"
@@ -29,9 +31,11 @@
                 android:src="@drawable/close_white"
                 tools:ignore="ContentDescription" />
         </RelativeLayout>
+
+        <!-- expanded container...-->
         <LinearLayout
             android:visibility="gone"
-            android:id="@+id/expanded_container"
+            android:id="@+id/expanded_view"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:background="#00C1E7"
@@ -60,12 +64,16 @@
                 android:src="@drawable/close_white"
                 tools:ignore="ContentDescription" />
         </LinearLayout>
+
+
     </RelativeLayout>
 
     <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:gravity="center">
+        android:id="@+id/rocket_video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
         <VideoView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"

@@ -1,20 +1,19 @@
 package com.phonecleaner.icecleaner;
 
 
-import android.app.ActivityManager;
-import android.content.Context;
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.provider.Settings;
 
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 
@@ -57,6 +56,9 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnBa
     Intent mServiceIntent;
     private BackgroundService mBackGroundService;
 
+
+    BackgroundService backgroundService;
+    boolean mBounded;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnBa
         AdmobHelp.getInstance().loadBanner(this);
 
 
+        ;
 
     }
 
@@ -120,6 +123,7 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnBa
 //    }
 
     private void initializeView() {
+
         mServiceIntent = new Intent(MainActivity.this, BackgroundService.class);
         startService(mServiceIntent);
 
@@ -277,9 +281,29 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnBa
         }
     }
 
+    ServiceConnection mConnection = new ServiceConnection() {
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+            Toast.makeText(MainActivity.this, "Service is disconnected", Toast.LENGTH_SHORT).show();
+            mBounded = false;
+            backgroundService = null;
+        }
+
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            Toast.makeText(MainActivity.this, "Service is connected", Toast.LENGTH_SHORT).show();
+            mBounded = true;
+            BackgroundService.LocalBinder mLocalBinder = (BackgroundService.LocalBinder)service;
+            backgroundService = mLocalBinder.getServerInstance();
+        }
+    };
+
     @Override
     protected void onStart() {
         super.onStart();
+        Intent mIntent = new Intent(this, FloatingWidgetService.class);
+        bindService(mIntent, mConnection, BIND_AUTO_CREATE);
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(this)) {
             Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
                     Uri.parse("package:" + getPackageName()));
@@ -296,6 +320,7 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnBa
         Intent broadcastIntent = new Intent();
         broadcastIntent.setAction("BoostService");
         broadcastIntent.setClass(this, BoostReceiver.class);
+
         this.sendBroadcast(broadcastIntent);
 
     }
