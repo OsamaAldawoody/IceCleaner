@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.util.Log;
 
-import com.phonecleaner.icecleaner.service.BackgroundService;
+    import com.phonecleaner.icecleaner.service.BackgroundService;
 
 public class BoostReceiver extends BroadcastReceiver {
     @Override
